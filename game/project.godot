@@ -1,0 +1,24 @@
+; Office Escape — one playable stealth level.
+config_version=5
+
+[application]
+config/name="Office Escape"
+run/main_scene="res://scenes/main.tscn"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+config/description="准点下班：避开三位领导，穿过办公室，成功下班。"
+config/version="0.1.0"
+
+[display]
+window/size/viewport_width=1152
+window/size/viewport_height=720
+window/size/window_width_override=1152
+window/size/window_height_override=720
+window/stretch/mode="canvas_items"
+
+[rendering]
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.045, 0.07, 0.10, 1)
+textures/default_filters/use_nearest_mipmap_filter=false
+textures/vram_compression/import_etc2_astc=true
+textures/vram_compression/import_s3tc_bptc=true

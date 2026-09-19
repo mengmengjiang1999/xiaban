@@ -1,0 +1,10 @@
+.DS_Store
+game/.godot/
+game/.godot.editor/
+builds/
+.tools/
+.logs/
+.cache/
+__pycache__/
+*.pyc
+game/export_credentials.cfg
