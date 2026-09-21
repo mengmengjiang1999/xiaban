@@ -1,0 +1,186 @@
+{
+  "system_assets/eyebrows/eyebrow001/eyebrow001.png": {
+    "size": 89619,
+    "sha256": "9940f7d0b1b223709a19b05156ba6f6e9e4dbdbced02d7574f4d51d72c58967b"
+  },
+  "system_assets/eyebrows/eyebrow001/eyebrow001.thumb": {
+    "size": 137534,
+    "sha256": "98b68eccf50977ff00242a33eb1dc6e3eaf4cc262e1f6c4ceca5c1c564f6c745"
+  },
+  "system_assets/eyebrows/eyebrow001/eyebrow001.obj": {
+    "size": 8227,
+    "sha256": "88b13146395133f3901715e11706cdfd293e5d6087ad7c5e01efe1485a26b513"
+  },
+  "system_assets/eyebrows/eyebrow001/eyebrow001.mhclo": {
+    "size": 9141,
+    "sha256": "54c8892c2ba577f4152d779ce1f20f7cd323beb8cbd9cb701796165c221b4f5b"
+  },
+  "system_assets/eyebrows/eyebrow001/eyebrow001.mhmat": {
+    "size": 1098,
+    "sha256": "976e5f4f1d3922d7a11c6e2db233f8b4584b068d00619d5749687e81c92d61fc"
+  },
+  "system_assets/clothes/shoes03/shoes03.thumb": {
+    "size": 37720,
+    "sha256": "ac461bf40bb9e125526198c6c827c0f5cfa5538ac86f25dd3efbff7d5aaf5a3c"
+  },
+  "system_assets/clothes/shoes04/shoes04.thumb": {
+    "size": 37350,
+    "sha256": "f6f6f0d30733ac1491072a453a82d105619c2af99228ec51d251cbf4776b8b7c"
+  },
+  "system_assets/clothes/shoes05/shoes05.thumb": {
+    "size": 41218,
+    "sha256": "f5d86e0427638e592c787f91a0427ae09df51f0a4d34665a069cfa3fcbc451b8"
+  },
+  "system_assets/clothes/shoes02/shoes02.thumb": {
+    "size": 43978,
+    "sha256": "0e41c095f5ff5a13c0d2b12a6c96d65d907137e1ae3fb120ff14300fc818015d"
+  },
+  "system_assets/clothes/male_casualsuit02/male_casualsuit02.thumb": {
+    "size": 37906,
+    "sha256": "e994394780be666443e70349b7f9e55704895e699054a45b4113037fdbab8e68"
+  },
+  "system_assets/clothes/male_casualsuit05/male_casualsuit05.thumb": {
+    "size": 39378,
+    "sha256": "ad39df902cbf63ce390e00bf3ceec495a6f94c3827875f57f669746cccf51ffb"
+  },
+  "system_assets/clothes/male_casualsuit04/male_casualsuit04.thumb": {
+    "size": 32838,
+    "sha256": "1424bac2dc95c2d6906bc0435b8de77ce71c25a35c97eece9c6c589944a2c683"
+  },
+  "system_assets/clothes/male_casualsuit03/male_casualsuit03.thumb": {
+    "size": 40578,
+    "sha256": "ea180cea474eeba10ed73b13920adee4e87ea12c84f96a7d58b02caef90caf72"
+  },
+  "system_assets/clothes/shoes01/shoes01.mhclo": {
+    "size": 119049,
+    "sha256": "7994e38f7cdcee0bd5f55101660badcce0162fcdfc7f432218dd1eb301626252"
+  },
+  "system_assets/clothes/shoes01/shoes01.mhmat": {
+    "size": 1161,
+    "sha256": "db1711e2dfea4dd8c24459643603a190d9a9da603fd26da5542002a73d740be8"
+  },
+  "system_assets/clothes/shoes01/shoes01_diffuse.png": {
+    "size": 1335772,
+    "sha256": "50c9a406a7f1cb6aa7b42912348e78f09d0252aa3963c8229cf18dfe8353cdbf"
+  },
+  "system_assets/clothes/shoes01/shoes01.obj": {
+    "size": 136910,
+    "sha256": "eac355a842a8eb8ae2f09fac8dd18a877a24ef2521ed2d6bf38559b42ce4b49a"
+  },
+  "system_assets/clothes/shoes01/shoes01_normal.png": {
+    "size": 875473,
+    "sha256": "a9bfd7223e98b8f93100e89596135e3a94e6044f9db11b4d23cec625c37a4599"
+  },
+  "system_assets/clothes/shoes01/shoes01.thumb": {
+    "size": 40319,
+    "sha256": "a118291fe3e83e3c616febf52fdb480186c816e7cd4d77d331adffd457421cbb"
+  },
+  "system_assets/clothes/shoes01/shoes01.mhw": {
+    "size": 324727,
+    "sha256": "b377d91e6d0264521f672c3990c366b2631103accba4921fc3965c2ed5ce395b"
+  },
+  "system_assets/clothes/shoes06/shoes06.thumb": {
+    "size": 43267,
+    "sha256": "31b24009786e31ccb0620adff6859fb23b907ffb98209b60f5121aececa8b5b2"
+  },
+  "system_assets/clothes/male_casualsuit06/male_casualsuit06_normal.png": {
+    "size": 2235477,
+    "sha256": "ccdbf48a86eb922f5ccf38a7d3dc9de8828a6460c687eb84dacf8315d079a343"
+  },
+  "system_assets/clothes/male_casualsuit06/male_casualsuit06_diffuse.png": {
+    "size": 1923464,
+    "sha256": "e9a581e0d4eb64c7a031886f2faf109a4703a3046a5fcc97ea9ce9112e99a344"
+  },
+  "system_assets/clothes/male_casualsuit06/male_casualsuit06.mhclo": {
+    "size": 252642,
+    "sha256": "9cebda22a0fa57fc556a1a77723f59b176724dc7e987c01214283677444ddcc5"
+  },
+  "system_assets/clothes/male_casualsuit06/male_casualsuit06.mhmat": {
+    "size": 1396,
+    "sha256": "2210d331d0e319147280363e281a4e98d24b71e678dac243d1250f5d27e9169f"
+  },
+  "system_assets/clothes/male_casualsuit06/male_casualsuit06.obj": {
+    "size": 300507,
+    "sha256": "9a86386435d7557a520320b8db4cd0ffe4755040044d1925c2b5730b864a603e"
+  },
+  "system_assets/clothes/male_casualsuit06/male_casualsuit06.thumb": {
+    "size": 31691,
+    "sha256": "df34cd082fd23e39f25f78d64fb49c27ad5ed054077b4ea3b101c7a59a93e459"
+  },
+  "system_assets/clothes/male_casualsuit06/male_casualsuit06_ao.png": {
+    "size": 1663549,
+    "sha256": "dc27b02602060a8df4c1117f55bde7dea952342d847003afe2c6e12145301147"
+  },
+  "system_assets/clothes/male_casualsuit01/male_casualsuit01.thumb": {
+    "size": 39401,
+    "sha256": "cd8a8c9461b164542d8660b9beaae17636040c9199020b65755a03559809cfc1"
+  },
+  "system_assets/skins/young_asian_male/young_asian_male.mhmat": {
+    "size": 1452,
+    "sha256": "9fdfc9863cd15d1359311435f2da7de3906f81d6eea549fba6bf14cd82ceb6a0"
+  },
+  "system_assets/skins/young_asian_male/young_lightskinned_male_diffuse3.png": {
+    "size": 3593099,
+    "sha256": "f50016a5507fc687dc8df06599c8ea48de950cd185de33a71cafc1319ddab4d5"
+  },
+  "system_assets/skins/young_asian_male/young_asian_male.thumb": {
+    "size": 79327,
+    "sha256": "21245c121a4efc96d18cb64a2fc7d95bfcc768f7b333d59b7a471708551ed13d"
+  },
+  "system_assets/eyes/materials/brown.mhmat": {
+    "size": 1247,
+    "sha256": "4abad93ce50541c08127721e77bce035640c9f16bed16cd0f5524b1cd5908465"
+  },
+  "system_assets/eyes/materials/brown_eye.png": {
+    "size": 610817,
+    "sha256": "4659691c7295ad6206c78b003e5fd0e5f91dcd53032fa914a229bb48cabe424b"
+  },
+  "system_assets/eyes/low-poly/low-poly.thumb": {
+    "size": 15938,
+    "sha256": "27b09c5a2bd792671c99a00016ec836855278f199bc4753c3018f1ac73068c72"
+  },
+  "system_assets/eyes/low-poly/low-poly.obj": {
+    "size": 6604,
+    "sha256": "783fe1e6331162c876520b4c2bed7a8ca06354ca15497e8ebd68bb1b59f4d3de"
+  },
+  "system_assets/eyes/low-poly/low-poly.mhclo": {
+    "size": 1344,
+    "sha256": "68582e28e9176cba7cfcf35208f671b6201b8d1bc95c32decff61a3160ec34d8"
+  },
+  "system_assets/hair/short02/short02.thumb": {
+    "size": 41127,
+    "sha256": "af21a0e84bfcc294b9840d90a04f1b6655ad909bc09328251886adffbc0727e8"
+  },
+  "system_assets/hair/short04/short04.thumb": {
+    "size": 41792,
+    "sha256": "a7db8f3db6e2a53194993de73b875d000f928b66a8ac4d6efab51bfd8e6664fd"
+  },
+  "system_assets/hair/short03/short03.thumb": {
+    "size": 39414,
+    "sha256": "aba276c3ddbcb6b2c5dc29eef595bd2e447bfd8ff530731454319ce301b1b782"
+  },
+  "system_assets/hair/short01/short01.mhclo": {
+    "size": 201588,
+    "sha256": "ae1ffaa98da5753b803b3a173bede4895d2215e6bb94763f3765a71f0e984f35"
+  },
+  "system_assets/hair/short01/short01.mhmat": {
+    "size": 1314,
+    "sha256": "01e2e12ce3f3d3c859225456660acadcdd27d4f4b4d888bcbd6f11998cadd975"
+  },
+  "system_assets/hair/short01/short01.obj": {
+    "size": 194450,
+    "sha256": "d998d8416f9b5d5591f1d756f4d292288d000a6951bc0f4d2e8e72727bbc44fa"
+  },
+  "system_assets/hair/short01/short01.thumb": {
+    "size": 35055,
+    "sha256": "7e942d29322841a07a8a3feaf438fb9efb6b54f5b733909cecc51e79dcaca995"
+  },
+  "system_assets/hair/short01/short01_diffuse.png": {
+    "size": 2354146,
+    "sha256": "f34a0957184e3d1e911ed59245f874f8d4843f61ee44ff49f43edb4be0196949"
+  },
+  "add-on-mpfb-v2.0.17.zip": {
+    "size": 45031536,
+    "sha256": "4f0a879d64a39bf646fbf5f53601ac678855da329d650617dca5737548239a87"
+  }
+}

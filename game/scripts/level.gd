@@ -15,9 +15,7 @@ func _ready() -> void:
 	for item in WALLS:
 		var r := _rect(item)
 		_add_blocker(r,2.3,true)
-		_box(Vector3(r.get_center().x,1.15,r.get_center().y),Vector3(r.size.x,2.3,r.size.y),_material("glass",Color(0.47,0.67,0.71,0.22)))
-		_box(Vector3(r.get_center().x,0.14,r.get_center().y),Vector3(r.size.x,0.28,r.size.y),_material("wall",Color("526873")))
-		_box(Vector3(r.get_center().x,2.32,r.get_center().y),Vector3(r.size.x+0.03,0.07,r.size.y+0.03),_material("frame",Color("82999b")))
+		_wall_visual(r)
 	for item in COVERS:
 		var r := _rect(item)
 		_add_blocker(r,1.9,true)
@@ -28,6 +26,13 @@ func _ready() -> void:
 		_desk(r)
 	_details()
 	_build_navigation()
+
+func _wall_visual(r: Rect2) -> void:
+	# Legacy v0.1 keeps its translucent full-height panel and opaque wall skirt.
+	# Alternative wall appearances must not change the shared collision footprint.
+	_box(Vector3(r.get_center().x,1.15,r.get_center().y),Vector3(r.size.x,2.3,r.size.y),_material("glass",Color(0.47,0.67,0.71,0.22)))
+	_box(Vector3(r.get_center().x,0.14,r.get_center().y),Vector3(r.size.x,0.28,r.size.y),_material("wall",Color("526873")))
+	_box(Vector3(r.get_center().x,2.32,r.get_center().y),Vector3(r.size.x+0.03,0.07,r.size.y+0.03),_material("frame",Color("82999b")))
 
 func _rect(a: Array) -> Rect2:
 	return Rect2(float(a[0]),float(a[1]),float(a[2]),float(a[3]))

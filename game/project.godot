@@ -2,11 +2,19 @@
 config_version=5
 
 [application]
-config/name="Office Escape"
-run/main_scene="res://scenes/main.tscn"
+config/name="下班 · P2 人形动作样板"
+config/name.p1="下班 · P1 移动与镜头"
+config/name.p2="下班 · P2 人形动作样板"
+run/main_scene="res://scenes/p2.tscn"
+run/main_scene.p1="res://scenes/p1.tscn"
+run/main_scene.p2="res://scenes/p2.tscn"
+run/main_scene.p2_benchmark="res://tests/p2_performance.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-config/description="准点下班：避开三位领导，穿过办公室，成功下班。"
-config/version="0.1.0"
+config/description="下班 P2：成人角色、六段骨骼动画与右肩镜头试玩。"
+config/description.p1="下班 P1：办公室移动与右肩第三人称镜头试玩。"
+config/version="0.3.0-p2"
+config/version.p1="0.2.0-p1"
+config/version.p2="0.3.0-p2"
 
 [display]
 window/size/viewport_width=1152

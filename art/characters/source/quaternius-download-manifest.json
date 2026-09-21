@@ -1,0 +1,180 @@
+{
+  "downloaded_on": "2026-09-21",
+  "author": "Quaternius",
+  "pack": "Universal Animation Library — Standard",
+  "download_page": "https://store.godotengine.org/asset/quaternius/universal-animation-library/",
+  "stable_download_entry": "https://store.godotengine.org/asset/quaternius/universal-animation-library/download/44/",
+  "author_website": "https://quaternius.com/packs/universalanimationlibrary.html",
+  "author_itch_page": "https://quaternius.itch.io/universal-animation-library",
+  "package_version_on_download_page": "Standard-1.0",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "included_license_file": ".tools/p2-assets/animations/library1-standard/Animation Library[Standard]/License.txt",
+  "zip_bytes": 14541205,
+  "zip_sha256": "18ff1a7215f4852b320203e8aaf02a1578b5c8eef9027fbaedfcedc7b85a3ac2",
+  "godot_glb_bytes": 6671104,
+  "godot_glb_sha256": "1b7bf67866360665426bb99e4c71bd619f19b408453c24e30f0c3071601eee5c",
+  "download_method": "Unauthenticated official author download; range transfer; every archive member checked by ZIP CRC",
+  "files": [
+    {
+      "path": "Animation Library[Standard]/",
+      "uncompressed_bytes": 0,
+      "compressed_bytes": 0,
+      "archive_timestamp": [
+        2025,
+        3,
+        19,
+        11,
+        1,
+        30
+      ],
+      "crc32": "00000000"
+    },
+    {
+      "path": "Animation Library[Standard]/Godot/",
+      "uncompressed_bytes": 0,
+      "compressed_bytes": 0,
+      "archive_timestamp": [
+        2025,
+        3,
+        19,
+        10,
+        53,
+        4
+      ],
+      "crc32": "00000000"
+    },
+    {
+      "path": "Animation Library[Standard]/Godot/AnimationLibrary_Godot_Standard.glb",
+      "uncompressed_bytes": 6671104,
+      "compressed_bytes": 2375496,
+      "archive_timestamp": [
+        2025,
+        3,
+        25,
+        18,
+        55,
+        16
+      ],
+      "crc32": "c53e7849"
+    },
+    {
+      "path": "Animation Library[Standard]/License.txt",
+      "uncompressed_bytes": 446,
+      "compressed_bytes": 214,
+      "archive_timestamp": [
+        2025,
+        3,
+        19,
+        10,
+        54,
+        32
+      ],
+      "crc32": "16f81845"
+    },
+    {
+      "path": "Animation Library[Standard]/Preview.png",
+      "uncompressed_bytes": 2424027,
+      "compressed_bytes": 2424027,
+      "archive_timestamp": [
+        2025,
+        3,
+        19,
+        10,
+        21,
+        28
+      ],
+      "crc32": "f9a647a7"
+    },
+    {
+      "path": "Animation Library[Standard]/Unity/",
+      "uncompressed_bytes": 0,
+      "compressed_bytes": 0,
+      "archive_timestamp": [
+        2025,
+        3,
+        19,
+        10,
+        53,
+        0
+      ],
+      "crc32": "00000000"
+    },
+    {
+      "path": "Animation Library[Standard]/Unity/AnimationLibrary_Unity_Standard.fbx",
+      "uncompressed_bytes": 20623420,
+      "compressed_bytes": 4215487,
+      "archive_timestamp": [
+        2025,
+        3,
+        25,
+        18,
+        54,
+        50
+      ],
+      "crc32": "82c7a4df"
+    },
+    {
+      "path": "Animation Library[Standard]/Unity_Setup.png",
+      "uncompressed_bytes": 237945,
+      "compressed_bytes": 213850,
+      "archive_timestamp": [
+        2025,
+        3,
+        19,
+        10,
+        21,
+        26
+      ],
+      "crc32": "edef91ac"
+    },
+    {
+      "path": "Animation Library[Standard]/Unreal Engine/",
+      "uncompressed_bytes": 0,
+      "compressed_bytes": 0,
+      "archive_timestamp": [
+        2025,
+        3,
+        19,
+        10,
+        52,
+        56
+      ],
+      "crc32": "00000000"
+    },
+    {
+      "path": "Animation Library[Standard]/Unreal Engine/AL_Standard.fbx",
+      "uncompressed_bytes": 24856556,
+      "compressed_bytes": 4982744,
+      "archive_timestamp": [
+        2025,
+        3,
+        25,
+        18,
+        41,
+        50
+      ],
+      "crc32": "cb048552"
+    },
+    {
+      "path": "Animation Library[Standard]/UnrealEngine_Setup.png",
+      "uncompressed_bytes": 347727,
+      "compressed_bytes": 327125,
+      "archive_timestamp": [
+        2025,
+        3,
+        20,
+        21,
+        17,
+        56
+      ],
+      "crc32": "7607ce29"
+    }
+  ],
+  "notes": [
+    "The Godot store Standard-1.0 archive is the actual acquired artifact; do not equate it with the newer itch.io v3.0 archive.",
+    "Contains 46 glTF animation clips and 53 skin joints; all six P2 action categories are present.",
+    "Roll ends in standing idle, so roll-to-crouch needs an explicit transition.",
+    "Roll is in-place; Roll_RM advances the glTF root by +4.9914327 along Z."
+  ]
+}

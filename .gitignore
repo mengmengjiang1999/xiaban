@@ -7,4 +7,5 @@ builds/
 .cache/
 __pycache__/
 *.pyc
+*.blend1
 game/export_credentials.cfg

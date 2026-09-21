@@ -1,0 +1,139 @@
+{
+  "source": "Quaternius Universal Animation Library Standard-1.0 (CC0)",
+  "character": "MPFB 2.0.17 + selected MakeHuman system assets (CC0)",
+  "target_bones": 53,
+  "clips": {
+    "idle": {
+      "source": "Idle_Loop",
+      "duration": 2.5,
+      "frames": 151,
+      "floor_correction_range": [
+        0.048011941462755205,
+        0.049117503315210344
+      ]
+    },
+    "walk": {
+      "source": "Walk_Loop",
+      "duration": 1.3333333333333333,
+      "frames": 81,
+      "floor_correction_range": [
+        0.024843662502826193,
+        0.0418566070497036
+      ]
+    },
+    "run": {
+      "source": "Sprint_Loop",
+      "duration": 0.6666666666666666,
+      "frames": 41,
+      "floor_correction_range": [
+        0,
+        0.04016145281493664
+      ]
+    },
+    "crouch_idle": {
+      "source": "Crouch_Idle_Loop",
+      "duration": 2.933333333333333,
+      "frames": 177,
+      "floor_correction_range": [
+        -0.006383946537971495,
+        -0.00524485521018505
+      ]
+    },
+    "crouch_walk": {
+      "source": "Crouch_Fwd_Loop",
+      "duration": 2.0,
+      "frames": 121,
+      "floor_correction_range": [
+        -0.011201413720846175,
+        0.02188340583816171
+      ]
+    },
+    "roll": {
+      "source": "Roll",
+      "duration": 1.4666666666666666,
+      "frames": 89,
+      "floor_correction_range": [
+        -0.7040030717849731,
+        0.19955558478832244
+      ]
+    }
+  },
+  "height_ratio": 0.9930183825742991,
+  "sample_rate_fps": 60,
+  "planted_floor_height_m": 0.025,
+  "sleeve_hidden_body_mask": {
+    "l": {
+      "removed_faces_before_reduction": 57,
+      "sleeve_rim_min_distance_from_shoulder_m": 0.12873317277990282,
+      "mask_end_distance_from_shoulder_m": 0.11673317277990282,
+      "minimum_skin_overlap_below_sleeve_m": 0.012
+    },
+    "r": {
+      "removed_faces_before_reduction": 63,
+      "sleeve_rim_min_distance_from_shoulder_m": 0.14262920399778523,
+      "mask_end_distance_from_shoulder_m": 0.13062920399778521,
+      "minimum_skin_overlap_below_sleeve_m": 0.012
+    }
+  },
+  "triangles": 19069,
+  "meshes": 6,
+  "textures": [
+    {
+      "name": "brown_eye.png",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "name": "eyebrow001.png",
+      "size": [
+        512,
+        512
+      ]
+    },
+    {
+      "name": "male_casualsuit06_diffuse.png",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "name": "male_casualsuit06_normal.png",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "name": "shoes01_diffuse.png",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "name": "shoes01_normal.png",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "name": "short01_diffuse.png",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "name": "young_lightskinned_male_diffuse3.png",
+      "size": [
+        1024,
+        1024
+      ]
+    }
+  ],
+  "glb_bytes": 7664512
+}

@@ -1,0 +1,18 @@
+{
+  "created": "2026-09-21",
+  "license": "CC0-1.0",
+  "files": {
+    "office_adult_base.blend": {
+      "bytes": 19346124,
+      "sha256": "9aa3e9293b0f89a20c0967c9f3c2b457c0f88d33da25b0b82f1be354280e14fc"
+    },
+    "quaternius_standard_1_0.glb": {
+      "bytes": 6671104,
+      "sha256": "1b7bf67866360665426bb99e4c71bd619f19b408453c24e30f0c3071601eee5c"
+    }
+  },
+  "tools": {
+    "blender": "4.5.9 LTS",
+    "mpfb": "2.0.17"
+  }
+}

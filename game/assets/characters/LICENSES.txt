@@ -1,0 +1,33 @@
+Office Worker — P2 character and animation sample
+Created/modified for this project on 2026-09-21.
+
+CHARACTER, CLOTHES, HAIR, SKIN, EYES, SHOES AND RIG
+MakeHuman Community / MPFB 2.0.17, CC0 1.0 Universal.
+https://static.makehumancommunity.org/about/license.html
+https://static.makehumancommunity.org/assets/assetpacks/makehuman_system_assets.html
+Selected official CC0 system assets: male_casualsuit06, shoes01, short01,
+eyebrow001, low-poly eyes, brown eyes, young_asian_male skin.
+The adult is generated at 1.75 m with the game_engine rig (53 bones).
+MPFB program code is not distributed in this game; its GPL license is distinct
+from the CC0 graphical assets and generated character.
+
+ANIMATIONS
+Quaternius — Universal Animation Library, Standard-1.0, CC0 1.0 Universal.
+Author-published free package from the Godot Asset Store:
+https://store.godotengine.org/asset/quaternius/universal-animation-library/
+https://quaternius.com/packs/universalanimationlibrary.html
+Idle_Loop, Walk_Loop, Sprint_Loop, Crouch_Idle_Loop, Crouch_Fwd_Loop, Roll.
+The downloaded Standard-1.0 contains 46 clips; only the six above are included
+in the game. This is not a claim about a later itch.io package/version.
+
+PROJECT MODIFICATIONS
+Retargeted to the MPFB game_engine skeleton, rest-pose correction, skin/mask
+baking, mesh reduction, 1K maximum textures, plain teal shirt, depth-safe solid
+and cutout materials, -Z forward, foot-floor calibration, six 60 FPS clips.
+Roll was adapted to begin/end crouched and uses no horizontal root motion.
+P2 previews run/crouch/roll in place; physical action control belongs to P3.
+The modified graphical assets are also provided under CC0 1.0 Universal.
+
+https://creativecommons.org/publicdomain/zero/1.0/
+The source project retains the full CC0 text, original author notice, input
+checksums and editable source files under art/characters/.
