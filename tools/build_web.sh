@@ -17,6 +17,7 @@ bash "$game_root/tools/godot.sh" --headless --export-release "$preset" "$game_ro
 
 python3 - "$game_root" "$sample" "$web_directory" <<'PY'
 from pathlib import Path
+import re
 import sys
 import zipfile
 
@@ -39,15 +40,17 @@ licenses.write_text(
 if sample in ('p2', 'p3', 'p4', 'p4b', 'release'):
     (web / 'CHARACTER-LICENSES.txt').write_text((root / 'game/assets/characters/LICENSES.txt').read_text(), encoding='utf-8')
 if sample == 'release':
+    version = re.search(r'^config/version="([^"]+)"$', (root / 'game/project.godot').read_text(), re.M).group(1)
     entry = web / 'index.html'
     entry.write_text(entry.read_text().replace('<html lang="en">', '<html lang="zh-CN">')
         .replace('Your browser does not support the canvas tag.', '浏览器无法显示游戏画面，请使用支持 WebGL 2 的电脑浏览器。')
         .replace('Your browser does not support JavaScript.', '请启用 JavaScript 后重新打开游戏。'), encoding='utf-8')
     (web / 'README.txt').write_text(
-        '下班 / Office Escape — 1.0.0\n\n'
+        f'下班 / Office Escape — {version}\n\n'
         '一个办公室潜行小游戏。穿过三段办公区，走到绿色楼梯口。\n'
         'W/S 前进倒退；A/D 转身；C 蹲起；站姿 Shift+W 冲刺；蹲姿 Space 向前翻滚。\n'
-        '右键拖动观察；滚轮调距；F 回正；Esc 暂停。\n'
+        '方向键或按住右键拖动调整左右、上下视角；滚轮调距；F 回正；Esc 暂停。\n'
+        '停止观察后暂留视角，未继续移动则保留；移动触发回正后平滑完成，观察可打断。\n'
         '矮柜后需要蹲下。领导抬头并实际认出你时失败；冲刺声会引他看向声源。\n'
         '暂停菜单可调音量和灵敏度，设置保存在当前浏览器本地。\n\n'
         '运行：通过 HTTP/HTTPS 服务器打开 index.html，不支持双击 file:// 运行。\n'

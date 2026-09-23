@@ -10,10 +10,12 @@ python3 - "$release_root" <<'PY'
 from pathlib import Path
 import hashlib
 import json
+import re
 import sys
 import zipfile
 
 root = Path(sys.argv[1])
+version = re.search(r'^config/version="([^"]+)"$', (root / 'game/project.godot').read_text(), re.M).group(1)
 web = root / 'builds/release-web'
 app = root / 'builds/macos/Xiaban.app'
 web_pck = web / 'index.pck'
@@ -28,15 +30,16 @@ with zipfile.ZipFile(native_zip, 'w', zipfile.ZIP_DEFLATED) as archive:
             archive.write(path, path.relative_to(app.parent))
     for name in ['LICENSES.txt', 'CHARACTER-LICENSES.txt', 'OFL-NotoSansSC.txt']:
         archive.write(web / name, name)
-    archive.writestr('README.txt', '下班 / Office Escape — 1.0.0\n\n解压后运行 Xiaban.app。\n'
+    archive.writestr('README.txt', f'下班 / Office Escape — {version}\n\n解压后运行 Xiaban.app。\n'
         'W/S 前进倒退，A/D 转身，C 蹲起，站姿 Shift+W 冲刺，蹲姿 Space 翻滚。\n'
-        '右键观察，滚轮调距，F 回正，Esc 暂停。\n'
+        '方向键或按住右键拖动调整左右、上下视角，滚轮调距，F 回正，Esc 暂停。\n'
+        '停止观察后暂留视角，未继续移动则保留；移动触发回正后平滑完成，观察可打断。\n'
         '这是本地开发构建，采用 ad-hoc 签名，未做 Apple 公证或商店分发。\n'
-        '兼容性与实测范围见项目 docs/P5-P6交付测试记录.md。\n')
+        '兼容性与本轮实测范围见项目 docs/发布前稳定性测试记录.md。\n')
 with zipfile.ZipFile(native_zip) as archive:
     assert archive.testzip() is None
 manifest = {
-    'version': '1.0.0',
+    'version': version,
     'scene': 'res://scenes/release.tscn',
     'pck_sha256': digest(web_pck),
     'pck_bytes': web_pck.stat().st_size,

@@ -7,6 +7,7 @@
  * RELEASE_SMOKE_ONLY=1 verifies normal entry and real localhost iframe embedding.
  * RELEASE_MENU_ONLY=1 verifies settings persistence, fullscreen, focus and embedding.
  * RELEASE_URL defaults to http://127.0.0.1:8772/; RELEASE_HEADLESS=0 uses a window.
+ * RELEASE_OUT optionally preserves version-specific evidence in another directory.
  * On macOS launch outside the filesystem sandbox; sandboxed Chrome can crash
  * during native initialization before it loads the game.
  */
@@ -21,7 +22,7 @@ const HEADLESS = process.env.RELEASE_HEADLESS !== '0';
 const FINAL_ONLY = process.env.RELEASE_FINAL_ONLY === '1';
 const SMOKE_ONLY = process.env.RELEASE_SMOKE_ONLY === '1';
 const MENU_ONLY = process.env.RELEASE_MENU_ONLY === '1';
-const OUT = path.resolve(MENU_ONLY ? '.logs/release-browser-menu' : SMOKE_ONLY ? '.logs/release-browser-smoke' : FINAL_ONLY ? '.logs/release-browser-final' : '.logs/release-browser');
+const OUT = path.resolve(process.env.RELEASE_OUT || (MENU_ONLY ? '.logs/release-browser-menu' : SMOKE_ONLY ? '.logs/release-browser-smoke' : FINAL_ONLY ? '.logs/release-browser-final' : '.logs/release-browser'));
 const qaURL = new URL(BASE);
 qaURL.searchParams.set('p1_qa', '1');
 qaURL.searchParams.set('p3_qa', '1');

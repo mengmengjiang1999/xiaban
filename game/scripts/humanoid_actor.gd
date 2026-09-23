@@ -12,6 +12,7 @@ var _material_modes: Array[int] = []
 var _material_alphas: Array[float] = []
 var _animation_map: Dictionary = {}
 var _paused := false
+var _camera_fade_shader_materials: Array[StandardMaterial3D] = []
 
 func _ready() -> void:
 	name = "HumanoidVisual"
@@ -88,6 +89,22 @@ func set_paused(value: bool) -> void:
 			animation_player.pause()
 		else:
 			animation_player.play()
+
+func retain_camera_fade_shaders() -> void:
+	# Opt in only after the final wardrobe has registered all its materials.
+	# BaseMaterial3D drops a shader variant when its last user changes mode.
+	# Keep immutable HASH materials alive so exiting/re-entering camera fade
+	# cannot repeatedly evict and recompile that variant. They are never bound
+	# to a mesh, and the authored materials/cutout restoration stay unchanged.
+	if not _camera_fade_shader_materials.is_empty():
+		return
+	for source in materials:
+		var retained := source.duplicate() as StandardMaterial3D
+		retained.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA_HASH
+		# get_rid() initializes BaseMaterial3D's shader cache entry; its internal
+		# get_shader_rid() is not exposed to GDScript. This is not a GPU warmup.
+		retained.get_rid()
+		_camera_fade_shader_materials.append(retained)
 
 func set_camera_alpha(value: float) -> void:
 	for index in materials.size():

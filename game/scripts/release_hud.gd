@@ -18,8 +18,12 @@ func _ready() -> void:
 		if label.text.begins_with("OFFICE ESCAPE"):
 			label.text = "OFFICE ESCAPE   /   第一关"
 		elif "Space" in label.text and label.get_parent() == box:
-			label.text = "W / S 前进倒退 · A / D 转身 · C 蹲起\n站立 Shift + W 冲刺 · 蹲下 Space 向前翻滚\n右键拖动观察 · 滚轮调距 · F 回正 · Esc 暂停"
+			label.text = "W / S 前进倒退 · A / D 转身 · C 蹲起\n站立 Shift + W 冲刺 · 蹲下 Space 向前翻滚\n方向键 / 右键观察 · 滚轮调距 · F 回正 · Esc 暂停"
 			label.add_theme_font_size_override("font_size", 16)
+		elif "右键" in label.text and "Space" in label.text:
+			label.text = "W / S 前后 · A / D 转身    C 蹲起 · Shift+W 冲刺 · 蹲姿 Space 翻滚\n方向键 / 右键 观察 · 滚轮 调距 · F 回正 · Esc 暂停"
+		elif label.text == "观察灵敏度":
+			label.text = "鼠标观察灵敏度"
 	for node in _root.find_children("*", "HSlider", true, false):
 		_sensitivity = node as HSlider
 		break
@@ -88,7 +92,7 @@ func update_controls(status: Dictionary) -> void:
 	elif status.get("state", "") == "roll":
 		_hint.text = "翻滚朝向已锁定，落稳后再继续移动。"
 	elif before_cover:
-		_hint.text = "先借高柜观察；领导低头时，再向前挪。"
+		_hint.text = "方向键观察周围，F 回正；领导低头时再向前挪。"
 	elif status.get("stance", "standing") == "standing":
 		_hint.text = "矮柜挡不住站立身体，按 C 蹲下。"
 	else:

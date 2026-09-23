@@ -49,7 +49,7 @@ func _ready() -> void:
 	player.setup(self)
 	add_child(player)
 	player.reset_player(SPAWN)
-	rig = Rig.new()
+	rig = _create_rig()
 	add_child(rig)
 	rig.setup(player)
 	hud = _create_hud()
@@ -68,6 +68,9 @@ func _create_player() -> CharacterBody3D:
 
 func _create_hud() -> CanvasLayer:
 	return Hud.new()
+
+func _create_rig() -> Node3D:
+	return Rig.new()
 
 func _settle_preview() -> void:
 	# Physics bodies must be registered before resolving the initial menu view.
@@ -116,7 +119,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		elif event.pressed and event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
 			rig.zoom(-1.0)
 	elif event is InputEventMouseMotion and rig.observing:
-		rig.orbit(event.relative.x)
+		rig.orbit_motion(event.relative)
 
 func _notification(what: int) -> void:
 	if what == NOTIFICATION_APPLICATION_FOCUS_OUT or what == NOTIFICATION_WM_WINDOW_FOCUS_OUT:
@@ -129,6 +132,7 @@ func _clear_input() -> void:
 		player.stop_input()
 	if is_instance_valid(rig):
 		rig.set_observing(false)
+		rig.set_look_input(Vector2.ZERO)
 
 func _set_phase(next: String) -> void:
 	phase = next
@@ -230,6 +234,9 @@ func _publish_web_qa_state() -> void:
 		"heading": player.rotation.y,
 		"travel_distance": player.travel_distance,
 		"camera_yaw": rig.yaw,
+		"camera_pitch": rig.pitch_degrees,
+		"camera_look_input": [rig.look_input.x, rig.look_input.y],
+		"recenter_hold_remaining": rig.recenter_hold_remaining,
 		"desired_distance": rig.desired_distance,
 		"observing": rig.observing,
 		"move_input": player.move_input,

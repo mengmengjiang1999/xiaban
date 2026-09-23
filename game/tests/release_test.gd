@@ -4,6 +4,53 @@ extends "res://tests/p4b_test.gd"
 ## The inherited helper methods intentionally exercise the release actors and
 ## scenery instantiated below, rather than accepting historical P4 results.
 
+class CameraFrameProbe extends Node:
+	var sample: Callable
+	func _process(_delta: float) -> void:
+		sample.call()
+
+var _camera_route_frames := 0
+var _camera_route_max_step := 0.0
+var _camera_route_obstructions := 0
+var _camera_route_previous := Vector3.ZERO
+
+func _test_route() -> void:
+	_camera_route_frames = 0
+	_camera_route_max_step = 0.0
+	_camera_route_obstructions = 0
+	var probe := CameraFrameProbe.new()
+	probe.process_priority = 100
+	var sphere := SphereShape3D.new()
+	sphere.radius = world.rig.camera_radius - 0.002
+	probe.sample = func():
+		if world.phase == "won":
+			probe.set_process(false)
+			return
+		if world.phase != "playing":
+			return
+		var camera_position: Vector3 = world.rig.camera.global_position
+		if _camera_route_frames > 0:
+			_camera_route_max_step = maxf(_camera_route_max_step, _camera_route_previous.distance_to(camera_position))
+		_camera_route_previous = camera_position
+		_camera_route_frames += 1
+		var query := PhysicsShapeQueryParameters3D.new()
+		query.shape = sphere
+		query.transform = Transform3D(Basis.IDENTITY, camera_position)
+		query.collision_mask = world.rig.obstacle_mask
+		query.exclude = [world.player.get_rid()]
+		var anchor: Vector3 = world.player.global_position + Vector3.UP * world.rig.anchor_height
+		var ray := PhysicsRayQueryParameters3D.create(anchor, camera_position, world.rig.obstacle_mask, query.exclude)
+		var space := world.get_world_3d().direct_space_state
+		if not space.intersect_shape(query, 1).is_empty() or not space.intersect_ray(ray).is_empty():
+			_camera_route_obstructions += 1
+	# The inherited helper resets the scene before its first awaited frame.
+	root.add_child(probe)
+	await super._test_route()
+	probe.queue_free()
+	_check(_camera_route_frames > 5000 and _camera_route_obstructions == 0, "Every rendered full-route camera sample clears walls and furniture")
+	_check(_camera_route_max_step < 0.30, "Automatic camera following stays below 30 cm per frame through the full stealth route")
+	print("RELEASE_ROUTE_CAMERA frames=%d max_step=%.6fm obstructions=%d" % [_camera_route_frames, _camera_route_max_step, _camera_route_obstructions])
+
 func _run() -> void:
 	world = load("res://scenes/release.tscn").instantiate()
 	root.add_child(world)
