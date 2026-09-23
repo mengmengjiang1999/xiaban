@@ -2,19 +2,38 @@
 config_version=5
 
 [application]
-config/name="下班 · P2 人形动作样板"
+config/name="下班"
+config/icon="res://assets/icon.svg"
+boot_splash/show_image=false
+boot_splash/bg_color=Color(0.078, 0.169, 0.208, 1)
+config/name.p4b="下班 · 第一关潜行"
 config/name.p1="下班 · P1 移动与镜头"
 config/name.p2="下班 · P2 人形动作样板"
-run/main_scene="res://scenes/p2.tscn"
+config/name.p2_benchmark="下班 · P2 人形性能基线"
+config/name.p4="下班 · P4 办公室潜行"
+config/name.p3="下班 · P3 完整角色控制"
+run/main_scene="res://scenes/release.tscn"
+run/main_scene.p4b="res://scenes/p4b.tscn"
 run/main_scene.p1="res://scenes/p1.tscn"
 run/main_scene.p2="res://scenes/p2.tscn"
+run/main_scene.p4="res://scenes/p4.tscn"
+run/main_scene.p3="res://scenes/p3.tscn"
 run/main_scene.p2_benchmark="res://tests/p2_performance.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-config/description="下班 P2：成人角色、六段骨骼动画与右肩镜头试玩。"
+config/description="今天，也要准时下班。避开三位领导，穿过办公室，走到楼梯口。"
+config/description.p4b="下班 P4：避开三位领导，穿过办公室，走到楼梯口。"
+config/description.p4="下班 P4a：避开办公中的领导，利用掩体悄悄出门。"
+config/description.p2="下班 P2：成人角色、六段骨骼动画与右肩镜头试玩。"
+config/description.p2_benchmark="下班 P2：一个玩家与三个同模副本的渲染性能基线。"
+config/description.p3="下班 P3：完整蹲起、站姿冲刺、蹲姿翻滚与右肩镜头试玩。"
 config/description.p1="下班 P1：办公室移动与右肩第三人称镜头试玩。"
-config/version="0.3.0-p2"
+config/version="1.0.0"
+config/version.p4b="0.6.0-p4"
 config/version.p1="0.2.0-p1"
 config/version.p2="0.3.0-p2"
+config/version.p2_benchmark="0.3.0-p2-benchmark"
+config/version.p4="0.5.0-p4a"
+config/version.p3="0.4.0-p3"
 
 [display]
 window/size/viewport_width=1152

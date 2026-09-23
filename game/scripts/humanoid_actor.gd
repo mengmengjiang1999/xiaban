@@ -22,6 +22,14 @@ func _ready() -> void:
 	add_child(model)
 	_collect(model)
 	assert(animation_player != null and skeleton != null, "P2 asset must include a skeleton and animations")
+	# Playback policy is per actor: P3's one-shot roll must not change P2 previews.
+	for library_name in animation_player.get_animation_library_list():
+		var source := animation_player.get_animation_library(library_name)
+		var library := AnimationLibrary.new()
+		for clip in source.get_animation_list():
+			library.add_animation(clip, source.get_animation(clip).duplicate(true))
+		animation_player.remove_animation_library(library_name)
+		animation_player.add_animation_library(library_name, library)
 	for animation_name in animation_player.get_animation_list():
 		var action := String(animation_name).get_file()
 		if action in ACTIONS:
@@ -50,16 +58,26 @@ func _collect(node: Node) -> void:
 	for child in node.get_children():
 		_collect(child)
 
-func play_action(action: String, rate: float = 1.0) -> void:
+func play_action(action: String, rate: float = 1.0, restart: bool = false, looping: bool = true, blend: float = 0.12) -> void:
 	if animation_player == null or not _animation_map.has(action):
 		return
 	current_rate = rate
+	animation_player.get_animation(_animation_map[action]).loop_mode = Animation.LOOP_LINEAR if looping else Animation.LOOP_NONE
 	animation_player.speed_scale = rate
-	if current_action != action or not animation_player.is_playing():
+	if restart or current_action != action or not animation_player.is_playing():
 		current_action = action
-		animation_player.play(_animation_map[action], 0.12, 1.0, rate < 0.0)
+		animation_player.play(_animation_map[action], blend, 1.0, rate < 0.0)
+		if restart:
+			animation_player.seek(0.0, true)
 	if _paused:
 		animation_player.pause()
+
+func action_length(action: String) -> float:
+	return animation_player.get_animation(_animation_map[action]).length if _animation_map.has(action) else 0.0
+
+func bone_world_position(bone_name: String) -> Vector3:
+	var bone := skeleton.find_bone(bone_name)
+	return skeleton.global_transform * skeleton.get_bone_global_pose(bone).origin if bone >= 0 else global_position
 
 func set_paused(value: bool) -> void:
 	if value == _paused:
